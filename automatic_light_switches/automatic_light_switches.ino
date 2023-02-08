@@ -120,13 +120,14 @@ void handle_both() {
 }
 
 void loop() {
-  time_t curr_time = now();
-  if (hour(curr_time) == 23 && minute(curr_time) == 30 && second(curr_time) == 0) {
-    turn_both_off();
-  }
-  else if (hour(curr_time) == 7 && minute(curr_time) == 30 && second(curr_time) == 0) {
-    turn_both_on();
-  }
+  // commenting out automatic turn on / off
+  // time_t curr_time = now();
+  // if (hour(curr_time) == 23 && minute(curr_time) == 30 && second(curr_time) == 0) {
+  //   turn_both_off();
+  // }
+  // else if (hour(curr_time) == 7 && minute(curr_time) == 30 && second(curr_time) == 0) {
+  //   turn_both_on();
+  // }
   
   if (IrReceiver.decode()) {
     IrReceiver.resume();
